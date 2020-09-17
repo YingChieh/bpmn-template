@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+***Use bpmn-js to display a local BPMN 2.0 diagram file in a React application.***
+
 ## Available Scripts
 
 In the project directory, you can run:
