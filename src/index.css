@@ -5,9 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 10px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Show in default resolution screen*/
+#container {
+  height: 500px;
+  width: 960px;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */
+@media only screen and (max-width: 479px) {
+  #container {
+    width: 90%;
+  }
 }
