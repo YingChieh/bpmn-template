@@ -5,10 +5,15 @@ import diagramUrl from "../assets/diagram.bpmn";
 import $ from 'jquery';
 
 // export a modeler page component
-// use the Modeler to instantiate a modeler instance
 import React, { Component } from "react";
 
 export default class HomePage extends Component {
+    constructor(){
+        super();
+        this.viewer = new BpmnJS();
+        this.openDiagram=this.openDiagram.bind(this);
+    }
+
     render() {
         return (
             <div>
@@ -31,9 +36,9 @@ export default class HomePage extends Component {
     openDiagram(bpmnXML) {
         //console.log(bpmnXML);
 
-        this.viewer = new BpmnJS();
         // import diagram
         this.viewer.attachTo("#container");
+        
         try {
             //eslint-disable-next-line
             const { warnings } = this.viewer.importXML(bpmnXML);
